@@ -42,6 +42,15 @@ def get_files(path: str, extention: str = "*") -> list:
     return files
 
 
+def get_all_paths(src_path, trg_path, extension):
+    files = []
+    for d in get_dirs(src_path):
+        mkdir(d.replace(src_path, trg_path))
+        for f in get_files(d, extension):
+            files.append(f)
+    return files
+
+
 def set_default_dirs():
     mkdir("00_src_pdf")
     mkdir("01_src_img")
