@@ -1,7 +1,12 @@
 import os
-import PyPDF2
 import img2pdf
+#import PyPDF2
 
+from pdf2image import convert_from_path
+
+"""
+# pdf 페이지 내부의 이미지 추출 기능
+# 일부 png 확장자등에서 에러 발생
 
 def page_to_image(page: "PageObject", trg_path: str) -> None:
     try:
@@ -22,7 +27,7 @@ def page_to_image(page: "PageObject", trg_path: str) -> None:
                 img.write(data)
                 img.close()
 
-                """
+                '''
                 if xObject[obj]['/Filter'] == '/FlateDecode':
                     img = Image.frombytes(mode, size, data)
                     img.save(f"{trg_path}.png")
@@ -34,7 +39,7 @@ def page_to_image(page: "PageObject", trg_path: str) -> None:
                     img = open(f"{trg_path}.jp2", "wb")
                     img.write(data)
                     img.close()    
-                """
+                '''
             break
     except:
         return
@@ -52,6 +57,11 @@ def pdf_to_images(src_path: str, trg_dir: str) -> None:
 
         trg_path = os.path.join(trg_dir, page_num)
         page_to_image(page, trg_path)
+"""
+
+
+def pdf_to_images(src_path: str, trg_dir: str) -> None:
+    convert_from_path(src_path, output_folder=trg_dir, fmt='jpg')
 
 
 def images_to_pdf(images: list, trg_path: str) -> None:

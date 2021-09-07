@@ -7,8 +7,8 @@
 *.png
 00_src_pdf/*
 01_src_img/*
-02_gray_img/*
-03_result_pdf/*
+02_trg_img/*
+03_trg_pdf/*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

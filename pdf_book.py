@@ -1,11 +1,9 @@
 """
 workflow
-1. pdf to images
-2. convert image gray
-3. convert image color
-4. handwork (select color or grayscale image)
-5. images to pdf
-6. 이 코드는 grayscale png -> pdf -> png 변환은 실패한다.
+1. pdf to images (color and gray)
+2. handwork (select color or gray)
+3. images to pdf
+4. 이 코드는 grayscale png -> pdf -> png 변환은 실패한다.
    변환해야 한다면 LibreOffice Draw -> 내보내기 -> HTML 을 사용하면 된다.
 """
 
