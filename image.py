@@ -32,7 +32,7 @@ def histogram_compress(img):
     return img
 
 
-def remove_background(img, thresh=150):
+def remove_background(img, thresh=130):
     #img = resize(img)
     h = int(img.shape[0]/12)
     w = int(img.shape[1]/8)
