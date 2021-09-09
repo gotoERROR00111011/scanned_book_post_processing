@@ -64,9 +64,11 @@ vFlat의 경우 스마트폰 카메라로 촬영하기 때문에 빛, 그림자 
 ### Dependencies
 
 ```
-# windows
-# python 3.x
+# windows 10
+# anaconda
+# python 3.8.5
 pip install -r requirements.txt
+conda install -c conda-forge poppler
 ```
 
 <!-- Usage-->
@@ -74,9 +76,16 @@ pip install -r requirements.txt
 ## Usage
 
 ```sh
-# pdf to images
-$python pdf2images.py
+$python path.py
+$python pdf_to_img.py
+$python img_to_pdf.py
 ```
+
+1. `path.py`를 실행하여 디렉토리 생성
+1. `00_src_pdf`에 변환할 pdf 파일 삽입
+1. `pdf_to_img.py`를 실행하여 pdf를 이미지로 변환
+1. `01_src_img`(color) 표지 등 색이 필요한 이미지를 `02_trg_img`(gray) 로 이동
+1. `img_to_pdf.py` 실행
 
 <!-- Extra Sections-->
 

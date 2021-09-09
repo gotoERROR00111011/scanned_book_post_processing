@@ -56,3 +56,6 @@ def set_default_dirs():
     mkdir("01_src_img")
     mkdir("02_trg_img")
     mkdir("03_trg_pdf")
+
+
+set_default_dirs()

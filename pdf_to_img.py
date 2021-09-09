@@ -11,7 +11,6 @@ trg_pdf_path = '03_trg_pdf'
 
 # pdfs to images
 for pdf in get_all_paths(src_pdf_path, src_img_path, "*.pdf"):
-    break
     trg_dir = pdf.replace(src_pdf_path, src_img_path)
     trg_dir = trg_dir.replace(".pdf", "")
     mkdir(trg_dir)
